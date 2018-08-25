@@ -25,7 +25,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/pixi.js-legacy/dist/pixi-legacy.min.js"
+            ]
           },
           "configurations": {
             "production": {

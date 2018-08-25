@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as PIXI from 'pixi.js-legacy';
 
 @Component({
   selector: 'app-root',
