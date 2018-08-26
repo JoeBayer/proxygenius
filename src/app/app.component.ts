@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as PIXI from 'pixi.js-legacy';
+//import * as PIXI from 'pixi.js-legacy';
 import * as Magic from 'mtgsdk-ts';
 
 @Component({
@@ -9,11 +9,23 @@ import * as Magic from 'mtgsdk-ts';
 })
 export class AppComponent implements OnInit{
   title = 'ProxyGenius';
+  solRingSearchResults: Magic.Card[];
 
   ngOnInit() {
-    //let sprite = PIXI.Sprite.fromImage('assets/image.png');
     //let magic = Magic.Cards.find('1').then(result => console.log(result.name));
-    Magic.Cards.find("08618f8d5ebdc0c4d381ad11f0563dfebb21f4ee").then(result => console.log(result.name)); // Blood Scrivener
-  }
+    let solRingSearchCriteria: Magic.CardFilter = {
+      name: 'Sol Ring'
+    }
 
+    Magic.Cards
+    .where(solRingSearchCriteria)
+    .then((searchResult: Magic.Card[])=> {
+      console.log('Search Results:');
+      this.solRingSearchResults = searchResult.filter((result)=>{
+        console.log('Here is the imageUrl ' + result.imageUrl);
+        return result.imageUrl;
+      });
+      console.log(this.solRingSearchResults);
+    });
+  }
 }
