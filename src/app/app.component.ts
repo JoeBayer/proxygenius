@@ -22,7 +22,6 @@ export class AppComponent implements OnInit{
     .then((searchResult: Magic.Card[])=> {
       console.log('Search Results:');
       this.solRingSearchResults = searchResult.filter((result)=>{
-        console.log('Here is the imageUrl ' + result.imageUrl);
         return result.imageUrl;
       });
       console.log(this.solRingSearchResults);

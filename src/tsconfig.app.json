@@ -2,10 +2,7 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "types": [
-      "../node_modules/mtgsdk-ts/out/Magic.d.ts",
-      "../node_modules/mtgsdk-ts/out/IMagic.d.ts"
-    ]
+    "types": []
   },
   "exclude": [
     "test.ts",
