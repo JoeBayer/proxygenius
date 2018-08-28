@@ -4,12 +4,6 @@
     :-)
   </h1>
 
-  <div class="container">
-      <div *ngFor="let result of solRingSearchResults">
-        <div class="col-lg-3 col-sm-4 col-12">
-          <img src="{{result.imageUrl}}"/>
-        </div>
-      </div>
-  </div>
+  <img *ngIf="solRingSearchResults" src="{{solRingSearchResults.image_uris.art_crop}}"/>
 
 </div>

@@ -27,8 +27,8 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "./node_modules/mtgsdk-ts/out/Magic.js",
-              "./node_modules/mtgsdk-ts/out/IMagic.js",
+              "./node_modules/scryfall-sdk/out/Scry.js",
+              "./node_modules/scryfall-sdk/out/IScry.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
